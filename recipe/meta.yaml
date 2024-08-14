@@ -1,5 +1,5 @@
 {% set name = "reladiff" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/reladiff-{{ version }}.tar.gz
-  sha256: cd7bfd2270f0a5e73de49950fdb38f4bbf4d85fa18714c20aa3bb1148a6db97f
+  sha256: 76566ea6e812a46b53d0fcffe3209e6ea2054f2bb524c166228c90dd8541c0b6
 
 build:
   entry_points:
