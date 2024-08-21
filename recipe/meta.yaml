@@ -1,5 +1,5 @@
 {% set name = "reladiff" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/reladiff-{{ version }}.tar.gz
-  sha256: 76566ea6e812a46b53d0fcffe3209e6ea2054f2bb524c166228c90dd8541c0b6
+  sha256: cfdefa7abc001eef0c3c5ceafbb024877436568fee7c9aedeaf214a8c91032ab
 
 build:
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - click >=8.1
     - rich
     - toml >=0.10.2
-    - sqeleton >=0.1.4
+    - sqeleton >=0.1.6,<0.2.0
   run_constrained:
     - mysql-connector-python >=8.0.29
     - psycopg2 *
