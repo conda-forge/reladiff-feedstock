@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/reladiff-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reladiff-{{ version }}.tar.gz
   sha256: cfdefa7abc001eef0c3c5ceafbb024877436568fee7c9aedeaf214a8c91032ab
 
 build:
@@ -14,15 +14,15 @@ build:
     - reladiff = reladiff.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8.0,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - runtype >=0.5.0
     - dsnparse
     - click >=8.1
@@ -47,6 +47,7 @@ test:
     - reladiff --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/erezsh/reladiff
