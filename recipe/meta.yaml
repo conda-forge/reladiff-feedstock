@@ -28,7 +28,7 @@ requirements:
     - click >=8.1
     - rich
     - toml >=0.10.2
-    - sqeleton >=0.1.6,<0.2.0
+    - sqeleton >=0.1.7,<0.2.0
   run_constrained:
     - mysql-connector-python >=8.0.29
     - psycopg2 *
